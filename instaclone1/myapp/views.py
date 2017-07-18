@@ -2,5 +2,10 @@
 from __future__ import unicode_literals
 
 from django.shortcuts import render
+from datetime import  datetime
+from forms import SignUpForm
 
-# Create your views here.
+def signup_view(request):
+    if request.method == "GET":
+        today = datetime.now()
+        return render(request, 'index.html', {'today': today})
