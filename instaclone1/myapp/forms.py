@@ -6,7 +6,7 @@ from models import UserModel
 class SignUpForm(forms.ModelForm):
   class Meta:
     model = UserModel
-    fields = ['phone', 'age', 'full_name', 'gender']
+    fields = ['email','username','name','password']
 
 
 class LoginForm(forms.ModelForm):
